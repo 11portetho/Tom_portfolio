@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Chapter II: Pierre Gringoire | Thomas Porter</title>
+    <title>Topic modelling of BBC news articles using Latent Dirichlet allocation | Thomas Porter</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="Pierre Gringoire">
+    <meta name="description" content="This project provides an introduction to the latent Dirichlet allocation (LDA) model - a commonly used generative topic model which allocates a set of topics to a collection of documents by assuming each document exhibits each topic to different extents and each topic exhibits each word in the corpus to different extents. We discuss stochastic variational inference as a method of posterior inference for LDA. This combines stochastic optimisation and variational inference in order to approximate the posterior distribution of the latent variables given the observations in the LDA model.">
     <meta name="generator" content="Hugo 0.104.3" />
     
     
@@ -29,20 +29,20 @@
 
     
     
-    <meta property="og:title" content="Chapter II: Pierre Gringoire" />
-<meta property="og:description" content="Pierre Gringoire" />
+    <meta property="og:title" content="Topic modelling of BBC news articles using Latent Dirichlet allocation" />
+<meta property="og:description" content="This project provides an introduction to the latent Dirichlet allocation (LDA) model - a commonly used generative topic model which allocates a set of topics to a collection of documents by assuming each document exhibits each topic to different extents and each topic exhibits each word in the corpus to different extents. We discuss stochastic variational inference as a method of posterior inference for LDA. This combines stochastic optimisation and variational inference in order to approximate the posterior distribution of the latent variables given the observations in the LDA model." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://11portetho.github.io/Tom_portfolio/post/project-2/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2017-04-10T11:00:59-04:00" />
-<meta property="article:modified_time" content="2017-04-10T11:00:59-04:00" />
+<meta property="article:published_time" content="2022-09-08T10:58:08-04:00" />
+<meta property="article:modified_time" content="2022-09-08T10:58:08-04:00" />
 
-<meta itemprop="name" content="Chapter II: Pierre Gringoire">
-<meta itemprop="description" content="Pierre Gringoire"><meta itemprop="datePublished" content="2017-04-10T11:00:59-04:00" />
-<meta itemprop="dateModified" content="2017-04-10T11:00:59-04:00" />
-<meta itemprop="wordCount" content="590">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Chapter II: Pierre Gringoire"/>
-<meta name="twitter:description" content="Pierre Gringoire"/>
+<meta itemprop="name" content="Topic modelling of BBC news articles using Latent Dirichlet allocation">
+<meta itemprop="description" content="This project provides an introduction to the latent Dirichlet allocation (LDA) model - a commonly used generative topic model which allocates a set of topics to a collection of documents by assuming each document exhibits each topic to different extents and each topic exhibits each word in the corpus to different extents. We discuss stochastic variational inference as a method of posterior inference for LDA. This combines stochastic optimisation and variational inference in order to approximate the posterior distribution of the latent variables given the observations in the LDA model."><meta itemprop="datePublished" content="2022-09-08T10:58:08-04:00" />
+<meta itemprop="dateModified" content="2022-09-08T10:58:08-04:00" />
+<meta itemprop="wordCount" content="2153">
+<meta itemprop="keywords" content="NLP,Topic model,LDA,articles,stochastic optimisation,variational inference," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Topic modelling of BBC news articles using Latent Dirichlet allocation"/>
+<meta name="twitter:description" content="This project provides an introduction to the latent Dirichlet allocation (LDA) model - a commonly used generative topic model which allocates a set of topics to a collection of documents by assuming each document exhibits each topic to different extents and each topic exhibits each word in the corpus to different extents. We discuss stochastic variational inference as a method of posterior inference for LDA. This combines stochastic optimisation and variational inference in order to approximate the posterior distribution of the latent variables given the observations in the LDA model."/>
 
 	
   </head>
@@ -53,8 +53,9 @@
    
   
 
-  <header>
-    <div class="bg-black">
+  
+  <header class="cover bg-top" style="background-image: url('https://11portetho.github.io/Tom_portfolio/images/bbc.png');">
+    <div class="bg-black-60">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
     <a href="https://11portetho.github.io/Tom_portfolio/" class="f3 fw2 hover-white no-underline white-90 dib">
@@ -121,6 +122,12 @@
   </div>
 </nav>
 
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Topic modelling of BBC news articles using Latent Dirichlet allocation</h1>
+          
+        
+      </div>
     </div>
   </header>
 
@@ -146,92 +153,94 @@
 
 
 
-  <div id="sharing" class="mt3 ananke-socials">
-    
-      
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://11portetho.github.io/Tom_portfolio/post/project-2/&amp;title=Chapter%20II:%20Pierre%20Gringoire" class="ananke-social-link linkedin no-underline" aria-label="share on LinkedIn">
-        
-        <span class="icon"> <svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
-</svg>
-</span>
-        
-      </a>
-    
-  </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">Chapter II: Pierre Gringoire</h1>
+
+      <h1 class="f1 athelas mt3 mb1">Topic modelling of BBC news articles using Latent Dirichlet allocation</h1>
       
       
       
-      <time class="f6 mv4 dib tracked" datetime="2017-04-10T11:00:59-04:00">April 10, 2017</time>
+      <time class="f6 mv4 dib tracked" datetime="2022-09-08T10:58:08-04:00">September 8, 2022</time>
       
 
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Nevertheless, as be harangued them, the satisfaction and admiration
-unanimously excited by his costume were dissipated by his words; and when
-he reached that untoward conclusion: “As soon as his illustrious eminence,
-the cardinal, arrives, we will begin,” his voice was drowned in a thunder
-of hooting.</p>
-<p>“Begin instantly! The mystery! the mystery immediately!” shrieked the
-people. And above all the voices, that of Johannes de Molendino was
-audible, piercing the uproar like the fife’s derisive serenade: “Commence
-instantly!” yelped the scholar.</p>
-<p>“Down with Jupiter and the Cardinal de Bourbon!” vociferated Robin
-Poussepain and the other clerks perched in the window.</p>
-<p>“The morality this very instant!” repeated the crowd; “this very instant!
-the sack and the rope for the comedians, and the cardinal!”</p>
-<p>Poor Jupiter, haggard, frightened, pale beneath his rouge, dropped his
-thunderbolt, took his cap in his hand; then he bowed and trembled and
-stammered: “His eminence—the ambassadors—Madame Marguerite of
-Flanders—.” He did not know what to say. In truth, he was afraid of
-being hung.</p>
-<p>Hung by the populace for waiting, hung by the cardinal for not having
-waited, he saw between the two dilemmas only an abyss; that is to say, a
-gallows.</p>
-<p>Luckily, some one came to rescue him from his embarrassment, and assume
-the responsibility.</p>
-<p>An individual who was standing beyond the railing, in the free space
-around the marble table, and whom no one had yet caught sight of, since
-his long, thin body was completely sheltered from every visual ray by the
-diameter of the pillar against which he was leaning; this individual, we
-say, tall, gaunt, pallid, blond, still young, although already wrinkled
-about the brow and cheeks, with brilliant eyes and a smiling mouth, clad
-in garments of black serge, worn and shining with age, approached the
-marble table, and made a sign to the poor sufferer. But the other was so
-confused that he did not see him. The new comer advanced another step.</p>
-<p>“Jupiter,” said he, “my dear Jupiter!”</p>
-<p>The other did not hear.</p>
-<p>At last, the tall blond, driven out of patience, shrieked almost in his
-face,—</p>
-<p>“Michel Giborne!”</p>
-<p>“Who calls me?” said Jupiter, as though awakened with a start.</p>
-<p>“I,” replied the person clad in black.</p>
-<p>“Ah!” said Jupiter.</p>
-<p>“Begin at once,” went on the other. “Satisfy the populace; I undertake to
-appease the bailiff, who will appease monsieur the cardinal.”</p>
-<p>Jupiter breathed once more.</p>
-<p>“Messeigneurs the bourgeois,” he cried, at the top of his lungs to the
-crowd, which continued to hoot him, “we are going to begin at once.”</p>
-<p>“<em>Evoe Jupiter! Plaudite cives</em>! All hail, Jupiter! Applaud,
-citizens!” shouted the scholars.</p>
-<p>“Noel! Noel! good, good,” shouted the people.</p>
-<p>The hand clapping was deafening, and Jupiter had already withdrawn under
-his tapestry, while the hall still trembled with acclamations.</p>
-<p>In the meanwhile, the personage who had so magically turned the tempest
-into dead calm, as our old and dear Corneille puts it, had modestly
-retreated to the half-shadow of his pillar, and would, no doubt, have
-remained invisible there, motionless, and mute as before, had he not been
-plucked by the sleeve by two young women, who, standing in the front row
-of the spectators, had noticed his colloquy with Michel Giborne-Jupiter.</p>
-<p>“Master,” said one of them, making him a sign to approach. “Hold your
-tongue, my dear Liénarde,” said her neighbor, pretty, fresh, and very
-brave, in consequence of being dressed up in her best attire. “He is not a
-clerk, he is a layman; you must not say master to him, but messire.”</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>This project provides an introduction to the latent Dirichlet allocation (LDA) model - a commonly used generative topic model which allocates a set of topics to a collection of documents by assuming each document exhibits each topic to different extents and each topic exhibits each word in the corpus to different extents. We discuss stochastic variational inference as a method of posterior inference for LDA. This combines stochastic optimisation and variational inference in order to approximate the posterior distribution of the latent variables given the observations in the LDA model. We then fit an LDA model to a dataset generated by scraping the text from 8422 BBC news articles, evaluating its performance using  a series of visualisations of the resulting topics.</p>
+<h2 id="introduction">Introduction</h2>
+<p>Topic modelling is an unsupervised learning technique used to identify topics within a set of documents by analysing the words observed in each document. Topic models make use of the fact that documents tend to exhibit several topics, each in their own proportion. They form topics which are collections of similar words, again each with their own proportions within the topic. It is a very useful technique for the exploration and organisation of data, particularly for large collections of data that would take too long to organise manually.</p>
+<h2 id="latent-dirichlet-allocation-model">Latent Dirichlet allocation model</h2>
+<p>Latent Dirichlet allocation or LDA, is a generative statistical model which assumes that within a set of documents or corpus, each document is distributed as a random mixture over latent topics and these topics are distributed according to a mixture over all of the words in the corpus. Each document consists of observations (in this case words) which are assumed to be drawn from a single topic. Displayed below is the plate notation for the LDA model. The shaded nodes represent observed variables whilst unshaded nodes indicate latent variables. Therefore, only the words, wd,n are observed. The topics, βk, topic proportions, θd and topic assignments, zd,n are all latent variables. The boxes or plates correspond to repeated entries. The larger plate represents documents while the smaller plate inside this corresponds to the word positions within each document. Lastly, the smallest plate
+represents the topics.</p>
+<figure><img src="https://11portetho.github.io/Tom_portfolio/images/plate.png"/>
+</figure>
+
+<p>The main assumption of LDA is that each document displays all of the K topics to different extents and each topic displays all of the words in the corpus to different extents. It is a generative model which means it models the distribution of both the inputs and outputs.
+This means that sampling from the model allows the generation of synthetic data points from the input space. The generative process of LDA is described in Algorithm 1:</p>
+<figure><img src="https://11portetho.github.io/Tom_portfolio/images/algo7.png"/>
+</figure>
+
+<p>The aim of LDA is to be able to find the posterior distribution of the latent variables given the observations. However, computing this distribution is an intractable problem. Luckily there exist a number of methods for approximating the posterior. Methods such as expectation propagation, variational inference, Markov chain Monte Carlo methods and likelihood maximisation can all be used to find an approximation of the posterior distribution. In this project we will use stochastic variational inference. This applies stochastic optimisation to variational inference. Stochastic optimisation involves the minimisation or maximisation of an objective function in which randomness is present. When applied to variational inference, this results in an algorithm which iterates between taking a subsample from the dataset and re-estimating the latent structure of the model based on this subsample.</p>
+<figure><img src="https://11portetho.github.io/Tom_portfolio/images/algo8.png"/>
+</figure>
+
+<h2 id="application-to-bbc-news-article-dataset">Application to BBC news article dataset</h2>
+<h3 id="background">Background</h3>
+<p>Now that we have introduced the latent Dirichlet allocation and the stochastic variational inference algorithm used to for its posterior inference, it makes sense to apply this model to a dataset of our own. The dataset we will be using is one generated by scraping the text from a number of BBC news <a href="https://www.bbc.com/news">articles</a>. We have scraped the text from D=8422 documents from nine different sections of the BBC news website. These are: <em>coronavirus, UK, world, business, politics, technology, science, health</em> and <em>family and education</em>. Theoretically this would suggest that the documents should be clustered into K=9 topics. However, we will perform tests to decide on the optimal number of topics as we know documents can exhibit multiple topics, and these may not all be captured by the nine categories above.</p>
+<h3 id="implementation">Implementation</h3>
+<p>In order to scrape the text from an article, we need its URL. An efficient tool to use in order to access the URLs of our news articles is <a href="https://webscraper.io/">Web Scraper</a> which can be accessed through a google chrome extension. This enables users to scrape data from dynamic web pages, such as those with multiple levels of navigation. These include categories and pagination. We make use of their pagination handlers in order to scrape the URLs of the articles on the first 50 pages of each section of the BBC news website.
+Now that we have the URLs of the 8422 articles, we need to scrape the text data from them. We shall be using <em>Python 3</em>, in particular the libraries <em>os</em>, <em>urllib</em> and<em>BeautifulSoup</em>. These three libraries can be used in tandem with urllib sending the URL requests, BeautifulSoup extracting the text and os writing this text to a new file.
+With the article text data extracted, we need to perform a few pre-processing steps to make sure that the LDA model can perform properly. These steps are common in most natural language processing tasks. We begin by replacing all of the punctuation with white space, removing all numbers and converting all words to lower case. Next we remove all stop words from the text. Stop words are common words that are considered unimportant for the overall purpose of our model. There is no standardised list of stop words but we will be using the list from the Python library <em>nltk</em>. This contains words such as <em>and, if, but, the</em> and <em>for</em>. Clearly such words provide no evidence as to the topic of a document and so they can be removed. With the documents pre-processed, the total number of words in the corpus is N=2395739.
+For the implementation of the latent Dirichlet allocation model with stochastic variational inference, we will use the Python library <em>gensim</em>. This is a library specifically created for topic modelling and contains functionality for models such as <em>word2vec</em> and <em>doc2vec</em>.</p>
+<h3 id="results">Results</h3>
+<p>We shall begin by looking at a summary of our dataset which is illustrated below</p>
+<figure><img src="https://11portetho.github.io/Tom_portfolio/images/wordcountdist.jpg"/>
+</figure>
+
+<p>The tall, thin peak on the far left indicates that a large number of the documents contain very few words. However there also look to be many documents with at least N_d=125 words with several small peaks on the far right suggesting that some articles have close to N_d=1000 words. It will be interesting to see the difference in topic proportions for documents with a large difference in word counts. Perhaps some topics will largely be dominant in documents that have a lower word count.
+With our LDA model fitted, we can look at some visualisations of the topics generated. The figure below illustrates the word counts of documents in their dominant topics.</p>
+<figure><img src="https://11portetho.github.io/Tom_portfolio/images/topicdists.png"/>
+</figure>
+
+<p>There appears to be a spread in terms of document word count across most topics. As one would expect, the initial peak appears in most topics which correlates with the peak in the same position of the word count distribtuion figure. Several topics stand out in terms of the total number of documents that they are dominant in. Topics 13, 10, 6 and 3 all seem to be dominant in a large number of documents. On the contrary, topics 5, 7, 9 and 11 seem to be dominant in very few. As the right hand upper axis displays, we have also produced a representation of the topic word counts as a continuous probability density curve. The shape of this density is similar for most topics with an initial dip before a peak around N_d=300. The exceptions to this are topics 1, 5 and 7 which is potentially a result of them being dominant in very few documents.
+We should also take some other visualisations of our generated topics. The following figure displays some of the keywords for each topic. These are words which have high weight and occur frequently within each topic.</p>
+<figure><img src="https://11portetho.github.io/Tom_portfolio/images/topickeywords.jpg"/>
+</figure>
+
+<p>Upon first inspection of this figure, it is clear that <em>Covid</em> is very common among our topics. Indeed, <em>Covid</em> or similar words such as <em>pandemic</em> appear in all topics. This makes sense as the pandemic is still very much at the forefront of the news with its effects still being felt across the world. It is a similar case for <em>health</em> which appears in over half of the topics. Again this makes sense since the covid pandemic has caused huge problems to both the health of people and the healthcare systems that serve them. It is no surprise to see that <em>UK</em> is a keyword in 6 topics given that the BBC is the national broadcaster of the United Kingdom and so its news articles mainly report on events in the UK. Certain topics can be assumed to represent some of the sections of the BBC news website from which our dataset was taken. The <em>World</em> section seems to appear quite heavily in topics 9 and 10 with the former containing the keywords <em>North, Korea</em> and <em>China</em> and the latter containing the keywords <em>Ukraine, Russia, Shanghai</em> and <em>China</em> as well as the word <em>world</em> itself. The <em>Business</em> section seems to be covered by topic 11 which features the keywords <em>work, pay</em> and <em>production</em>. Lastly, the <em>Politics</em> section also appears to feature in topic 2 as it contains the keywords <em>Boris, Johnson, prime, minister</em> and <em>MPs</em>. The <em>technology, science</em> and <em>family and education</em> sections do not appear to have been captured by our topics. Perhaps this would not be the case were we to increase the number of topics $K$. However, this would come at the expense of a greater to computational cost to running the model and so we would have to restrict the number of additional topics if possible.</p>
+<p>It would be useful to have a look at the distribution of the documents&rsquo; dominant topics and topic weightages. These are shown in the figure below. For the graph on the left we have taken the topic with the highest weight from each document. For the graph on the right we have summed the each topic&rsquo;s weight over all documents. The figure indicates that several topics are relatively equally dominant across the corpus. Topics 13 (Covid) and 10 (World) are the most common dominant topics. This is not unexpected given the aforementioned pandemic and the ongoing war in Ukraine.</p>
+<figure><img src="https://11portetho.github.io/Tom_portfolio/images/domtops.jpg"/>
+</figure>
+
+<p>Certain topics are dominant in very few documents. Topics 5 and 7 seem to be dominant in fewer than 100 documents. This correlates with their topic weightage in the graph on the right meaning they are missing altogether from most of the corpus. It is not surprising that both graphs look similar. This suggests that a topic will tend to either have the highest weight in a document or have a very low weight. There are potentially a few exceptions to this with topics 9 and 11 having a noticeably higher topic weightage than dominant topic count. This implies that they tend to have a relatively high weight even if they are not the dominant topic in a document.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this report we have discussed one of the most commonly used topic models in the field of natural language processing - the latent Dirichlet allocation model. This generative statistical model generates a collection of topics within a corpus which are distributed over the observed words in the corpus. The individual documents are generated as a distribution over these topics with each word in each document being allocated to a topic. In order to generate the topics, LDA requires the posterior distribution of the topics, topic proportions and topic allocations conditioned on the observed words. However this distribution is intractable to compute and so we have to find a suitable approximation. One approach to approximating the posterior is stochastic variational inference. This combines stochastic optimisation with variational inference. Variational inference is used to approximate a distribution by proposing a family of distributions over the latent variables and choosing the member of the family that is closest to the posterior. Specifically, we use mean-field variational inference in which we make the assumption that the variational distribution can be factorised over a partition of the latent variables. The variational inference algorithm we use makes use of coordinate ascent which iteratively updates the local and global variational parameters - the parameters which our latent variables are dependent on. We used stochastic optimisation to optimise the variational objective function using noisy estimates of its natural gradient. These estimates are noisy due to the fact the algorithm only takes a sample of one observation from the dataset rather than using the entire dataset.</p>
+<p>To view the code used in this project and an in-depth report analysing our results, please click <a href="https://github.com/11portetho/MISCADA_project">here</a>.</p>
 <ul class="pa0">
+  
+   <li class="list di">
+     <a href="https://11portetho.github.io/Tom_portfolio/tags/nlp/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">NLP</a>
+   </li>
+  
+   <li class="list di">
+     <a href="https://11portetho.github.io/Tom_portfolio/tags/topic-model/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Topic model</a>
+   </li>
+  
+   <li class="list di">
+     <a href="https://11portetho.github.io/Tom_portfolio/tags/lda/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">LDA</a>
+   </li>
+  
+   <li class="list di">
+     <a href="https://11portetho.github.io/Tom_portfolio/tags/articles/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">articles</a>
+   </li>
+  
+   <li class="list di">
+     <a href="https://11portetho.github.io/Tom_portfolio/tags/stochastic-optimisation/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">stochastic optimisation</a>
+   </li>
+  
+   <li class="list di">
+     <a href="https://11portetho.github.io/Tom_portfolio/tags/variational-inference/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">variational inference</a>
+   </li>
   
 </ul>
 <div class="mt6 instapaper_ignoref">

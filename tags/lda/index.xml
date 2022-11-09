@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LDA on Thomas Porter</title>
+    <link>https://11portetho.github.io/Tom_portfolio/tags/lda/</link>
+    <description>Recent content in LDA on Thomas Porter</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 08 Sep 2022 10:58:08 -0400</lastBuildDate><atom:link href="https://11portetho.github.io/Tom_portfolio/tags/lda/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Topic modelling of BBC news articles using Latent Dirichlet allocation</title>
+      <link>https://11portetho.github.io/Tom_portfolio/post/project-2/</link>
+      <pubDate>Thu, 08 Sep 2022 10:58:08 -0400</pubDate>
+      
+      <guid>https://11portetho.github.io/Tom_portfolio/post/project-2/</guid>
+      <description>This project provides an introduction to the latent Dirichlet allocation (LDA) model - a commonly used generative topic model which allocates a set of topics to a collection of documents by assuming each document exhibits each topic to different extents and each topic exhibits each word in the corpus to different extents. We discuss stochastic variational inference as a method of posterior inference for LDA. This combines stochastic optimisation and variational inference in order to approximate the posterior distribution of the latent variables given the observations in the LDA model.</description>
+    </item>
+    
+  </channel>
+</rss>
