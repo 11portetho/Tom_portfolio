@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Chapter I: The Grand Hall | Thomas Porter</title>
+    <title>Cluster analysis of handwritten digits | Thomas Porter</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="description" content="The Grand Hall">
+    <meta name="description" content="Introduction This project provides an introduction to cluster analysis along with an example of its application on the MNIST dataset: a collection of 70,000 images of handwritten digits from 0-9. We discuss three methods of clustering: K-means, OPTICS and the Gaussian mixture model (and Expectation Maximisation algorithm) before describing principal component analysis, a common method used for data compression. These methods are subsequently applied to the MNIST dataset with their efficacy being evaluated using a number of both internal and external methods.">
     <meta name="generator" content="Hugo 0.104.3" />
     
     
@@ -29,20 +29,20 @@
 
     
     
-    <meta property="og:title" content="Chapter I: The Grand Hall" />
-<meta property="og:description" content="The Grand Hall" />
+    <meta property="og:title" content="Cluster analysis of handwritten digits" />
+<meta property="og:description" content="Introduction This project provides an introduction to cluster analysis along with an example of its application on the MNIST dataset: a collection of 70,000 images of handwritten digits from 0-9. We discuss three methods of clustering: K-means, OPTICS and the Gaussian mixture model (and Expectation Maximisation algorithm) before describing principal component analysis, a common method used for data compression. These methods are subsequently applied to the MNIST dataset with their efficacy being evaluated using a number of both internal and external methods." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://11portetho.github.io/Tom_portfolio/post/project-1/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2017-04-09T10:58:08-04:00" />
-<meta property="article:modified_time" content="2017-04-09T10:58:08-04:00" />
+<meta property="article:published_time" content="2021-05-05T10:58:08-04:00" />
+<meta property="article:modified_time" content="2021-05-05T10:58:08-04:00" />
 
-<meta itemprop="name" content="Chapter I: The Grand Hall">
-<meta itemprop="description" content="The Grand Hall"><meta itemprop="datePublished" content="2017-04-09T10:58:08-04:00" />
-<meta itemprop="dateModified" content="2017-04-09T10:58:08-04:00" />
-<meta itemprop="wordCount" content="794">
-<meta itemprop="keywords" content="scene," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Chapter I: The Grand Hall"/>
-<meta name="twitter:description" content="The Grand Hall"/>
+<meta itemprop="name" content="Cluster analysis of handwritten digits">
+<meta itemprop="description" content="Introduction This project provides an introduction to cluster analysis along with an example of its application on the MNIST dataset: a collection of 70,000 images of handwritten digits from 0-9. We discuss three methods of clustering: K-means, OPTICS and the Gaussian mixture model (and Expectation Maximisation algorithm) before describing principal component analysis, a common method used for data compression. These methods are subsequently applied to the MNIST dataset with their efficacy being evaluated using a number of both internal and external methods."><meta itemprop="datePublished" content="2021-05-05T10:58:08-04:00" />
+<meta itemprop="dateModified" content="2021-05-05T10:58:08-04:00" />
+<meta itemprop="wordCount" content="2436">
+<meta itemprop="keywords" content="clustering,k-means,OPTICS,GMM,MNIST,Scikit-Learn," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Cluster analysis of handwritten digits"/>
+<meta name="twitter:description" content="Introduction This project provides an introduction to cluster analysis along with an example of its application on the MNIST dataset: a collection of 70,000 images of handwritten digits from 0-9. We discuss three methods of clustering: K-means, OPTICS and the Gaussian mixture model (and Expectation Maximisation algorithm) before describing principal component analysis, a common method used for data compression. These methods are subsequently applied to the MNIST dataset with their efficacy being evaluated using a number of both internal and external methods."/>
 
 	
   </head>
@@ -54,7 +54,7 @@
   
 
   
-  <header class="cover bg-top" style="background-image: url('https://11portetho.github.io/Tom_portfolio/images/Pope-Edouard-de-Beaumont-1844.jpg');">
+  <header class="cover bg-top" style="background-image: url('https://11portetho.github.io/Tom_portfolio/images/mnist.png');">
     <div class="bg-black-60">
       <nav class="pv3 ph3 ph4-ns" role="navigation">
   <div class="flex-l justify-between items-center center">
@@ -124,11 +124,7 @@
 
       <div class="tc-l pv6 ph3 ph4-ns">
         
-          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Chapter I: The Grand Hall</h1>
-          
-            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
-              The Grand Hall
-            </h2>
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Cluster analysis of handwritten digits</h1>
           
         
       </div>
@@ -160,7 +156,7 @@
   <div id="sharing" class="mt3 ananke-socials">
     
       
-      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://11portetho.github.io/Tom_portfolio/post/project-1/&amp;title=Chapter%20I:%20The%20Grand%20Hall" class="ananke-social-link linkedin no-underline" aria-label="share on LinkedIn">
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://11portetho.github.io/Tom_portfolio/post/project-1/&amp;title=Cluster%20analysis%20of%20handwritten%20digits" class="ananke-social-link linkedin no-underline" aria-label="share on LinkedIn">
         
         <span class="icon"> <svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
@@ -172,86 +168,226 @@
   </div>
 
 
-      <h1 class="f1 athelas mt3 mb1">Chapter I: The Grand Hall</h1>
+      <h1 class="f1 athelas mt3 mb1">Cluster analysis of handwritten digits</h1>
       
       
       
-      <time class="f6 mv4 dib tracked" datetime="2017-04-09T10:58:08-04:00">April 9, 2017</time>
+      <time class="f6 mv4 dib tracked" datetime="2021-05-05T10:58:08-04:00">May 5, 2021</time>
       
 
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Three hundred and forty-eight years, six months, and nineteen days ago
-to-day, the Parisians awoke to the sound of all the bells in the triple
-circuit of the city, the university, and the town ringing a full peal.</p>
-<p>The sixth of January, 1482, is not, however, a day of which history has
-preserved the memory. There was nothing notable in the event which thus
-set the bells and the bourgeois of Paris in a ferment from early morning.
-It was neither an assault by the Picards nor the Burgundians, nor a hunt
-led along in procession, nor a revolt of scholars in the town of Laas, nor
-an entry of “our much dread lord, monsieur the king,” nor even a pretty
-hanging of male and female thieves by the courts of Paris. Neither was it
-the arrival, so frequent in the fifteenth century, of some plumed and
-bedizened embassy. It was barely two days since the last cavalcade of that
-nature, that of the Flemish ambassadors charged with concluding the
-marriage between the dauphin and Marguerite of Flanders, had made its
-entry into Paris, to the great annoyance of M. le Cardinal de Bourbon,
-who, for the sake of pleasing the king, had been obliged to assume an
-amiable mien towards this whole rustic rabble of Flemish burgomasters, and
-to regale them at his Hôtel de Bourbon, with a very “pretty morality,
-allegorical satire, and farce,” while a driving rain drenched the
-magnificent tapestries at his door.</p>
-<p>What put the “whole population of Paris in commotion,” as Jehan de Troyes
-expresses it, on the sixth of January, was the double solemnity, united
-from time immemorial, of the Epiphany and the Feast of Fools.</p>
-<p>On that day, there was to be a bonfire on the Place de Grève, a maypole at
-the Chapelle de Braque, and a mystery at the Palais de Justice. It had
-been cried, to the sound of the trumpet, the preceding evening at all the
-cross roads, by the provost’s men, clad in handsome, short, sleeveless
-coats of violet camelot, with large white crosses upon their breasts.</p>
-<p>So the crowd of citizens, male and female, having closed their houses and
-shops, thronged from every direction, at early morn, towards some one of
-the three spots designated.</p>
-<p>Each had made his choice; one, the bonfire; another, the maypole; another,
-the mystery play. It must be stated, in honor of the good sense of the
-loungers of Paris, that the greater part of this crowd directed their
-steps towards the bonfire, which was quite in season, or towards the
-mystery play, which was to be presented in the grand hall of the Palais de
-Justice (the courts of law), which was well roofed and walled; and that
-the curious left the poor, scantily flowered maypole to shiver all alone
-beneath the sky of January, in the cemetery of the Chapel of Braque.</p>
-<p>The populace thronged the avenues of the law courts in particular, because
-they knew that the Flemish ambassadors, who had arrived two days
-previously, intended to be present at the representation of the mystery,
-and at the election of the Pope of the Fools, which was also to take place
-in the grand hall.</p>
-<p>It was no easy matter on that day, to force one’s way into that grand
-hall, although it was then reputed to be the largest covered enclosure in
-the world (it is true that Sauval had not yet measured the grand hall of
-the Château of Montargis). The palace place, encumbered with people,
-offered to the curious gazers at the windows the aspect of a sea; into
-which five or six streets, like so many mouths of rivers, discharged every
-moment fresh floods of heads. The waves of this crowd, augmented
-incessantly, dashed against the angles of the houses which projected here
-and there, like so many promontories, into the irregular basin of the
-place. In the centre of the lofty Gothic* façade of the palace, the grand
-staircase, incessantly ascended and descended by a double current, which,
-after parting on the intermediate landing-place, flowed in broad waves
-along its lateral slopes,—the grand staircase, I say, trickled
-incessantly into the place, like a cascade into a lake. The cries, the
-laughter, the trampling of those thousands of feet, produced a great noise
-and a great clamor. From time to time, this noise and clamor redoubled;
-the current which drove the crowd towards the grand staircase flowed
-backwards, became troubled, formed whirlpools. This was produced by the
-buffet of an archer, or the horse of one of the provost’s sergeants, which
-kicked to restore order; an admirable tradition which the provostship has
-bequeathed to the constablery, the constablery to the <em>maréchaussée</em>,
-the <em>maréchaussée</em> to our <em>gendarmeri</em> of Paris.</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="introduction">Introduction</h2>
+<p>This project provides an introduction to cluster analysis along with an example of its application on the MNIST dataset: a collection of 70,000 images of handwritten digits from 0-9. We discuss three methods of clustering: K-means, OPTICS and the Gaussian mixture model (and Expectation Maximisation algorithm) before describing principal component analysis, a common method used for data compression. These methods are subsequently applied to the MNIST dataset with their efficacy being evaluated using a number of both internal and external methods.</p>
+<figure><img src="https://11portetho.github.io/Tom_portfolio/images/toy0.png"/>
+</figure>
+
+<p>Cluster Analysis or clustering is an unsupervised learning technique which is used to
+organise observations into different groups based on their features in such a way that
+observations within the same cluster have features more similar to each other than
+to those in different clusters. It is a very useful technique for data organisation and
+for learning relationships between different observations.</p>
+<h3 id="k-means-clustering">K-means clustering</h3>
+<p>The k-means algorithm is an example of a distance-based clustering method. Whilst
+many similar algorithms were proposed throughout the 1950’s and 1960’s, the first use
+of the name “k-means” came in 1967 from James MacQueen, of the Department of
+Statistics of the University of California.</p>
+<figure><img src="https://11portetho.github.io/Tom_portfolio/images/algo1.png"/>
+ </figure>
+
+<p>Steps 3 and 4 are repeated iteratively until the cluster assignments no longer change.
+At this stage a local optimum has been reached. However, one must note the use of
+the word local and that the quality of any clustering is highly sensitive to the choice of
+initial cluster centroids. In an ideal world, each initial cluster centroid will come from
+a different cluster. However, the probability of this happening is very small.</p>
+<p>We shall now take a look at the k-means algorithm in practice. We will go through step
+by step and see the outcome of each iteration. We have used the Python function
+<code>sklearn.datasets.make_blobs()</code>. Figure b shows step 1, the initial cluster centroid choices. These have been randomly
+picked from the dataset and are visible in the plot as the larger, coloured dots. Figure
+c shows the results of step 3. Each observation has been assigned to the cluster with
+the closest centroid. Figure d shows the results of step 4 in which the centroids have
+been updated as the mean vectors of the observations in each cluster. Figures e, f,
+g and h show the results at the end of each iteration. The cluster assignments no
+longer change after iteration 7 meaning the algorithm has ended. Note that as expected,
+the distortion of each clustering decreases as the algorithm proceeds. This is because the
+observations are getting closer and closer to their centroid. Despite the initial choice of
+centroids appearing to be a poor one, the centroids move into more appropriate positions
+as the algorithm iterates showing why the k-means algorithm is one of the most widely
+used in the field of cluster analysis.</p>
+<figure><img src="https://11portetho.github.io/Tom_portfolio/images/example1.png"/>
+</figure>
+
+<h2 id="optics">OPTICS</h2>
+<p>The nature of clusters within multi-dimensional datasets is such that their intrinsic
+structure cannot be summarised by global parameters. Therefore it is usually pointless
+using clustering methods which take as input a global density parameter. One option is to use a density-based method multiple times with a range of different parameter settings, such as DBSCAN. However, this is very difficult in practice since there is an infinite number of combinations for these parameters. A solution to this problem was proposed in 1999 by Mihael Ankerst, Markus M.Breunig, Hans-Peter Kriegel and J¨org Sander called OPTICS (Ordering Points To Identify the Clustering Structure). This algorithm produces an ordering of the observations
+in a dataset with respect to its density-based clustering structure such that observations
+which are close to each other are neighbours in the ordering.</p>
+<p>The OPTICS algorithm produces an ordering of the dataset, storing the core-distance
+and a reachability-distance for each observation. This allows one to find any density-based cluster in the dataset with respect to MinPts and a ε&rsquo; value so long as it is smaller than the generating distance ε. The OPTICS algorithm takes as inputs a dataset x, a
+generating distance ε and MinPts and its steps are shown in Algorithms 2 and 3.</p>
+<p><figure><img src="https://11portetho.github.io/Tom_portfolio/images/algo2.png"/>
+</figure>
+
+<figure><img src="https://11portetho.github.io/Tom_portfolio/images/algo3.png"/>
+</figure>
+
+<figure><img src="https://11portetho.github.io/Tom_portfolio/images/algo4.png"/>
+</figure>
+</p>
+<h2 id="gaussian-mixture-models">Gaussian mixture models</h2>
+<p>Sometimes, it can be useful to assume that a dataset contains observations which are distributed as a mixture of multivariate probability distributions. Each distribution in the mixture can then be considered as a cluster. The most common probability distribution used in such a method is the Gaussian distribution. The Gaussian distribution, otherwise known as the normal distribution is a very common continuous probability distribution for real-valued random variables.</p>
+<figure><img src="https://11portetho.github.io/Tom_portfolio/images/algo6.png"/>
+</figure>
+
+<p>To partition the data into clusters one can take the final parameters and use them to calculate the posterior probability of each observation being generated by each component and assign each observation to the component that maximises this probability.</p>
+<p>We shall now have a brief look at the use of the Gaussian mixture model on a toy dataset. Again we have made use of the Python function <code>sklearn.datasets.make_blobs</code> to generate a two-dimensional dataset. We have used the sklearn class <code>sklearn.mixture.GaussianMixture</code> to implement the Gaussian mixture model. This automatically uses the EM algorithm to find a local maximum of the log-likelihood function and hence a local optimum to the component parameters.</p>
+<figure><img src="https://11portetho.github.io/Tom_portfolio/images/example2.png"/>
+</figure>
+
+<p>The above figure illustrates the dataset before it has been clustered along with a visualisation of the parameter initialisation, the final fit and a graph of the log-likelihood function against the number of iterations of the EM algorithm. The final results show that the final mean vectors from running the k-means algorithm which we used as initial values for the means of the Gaussian components were good estimates as they have not moved much during the running of the EM algorithm and appear to lie in the centres of the three clusters. The covariance matrices have changed as expected to capture the variance in the dataset. Looking at the graph of the log-likelihood function of the Gaussian mixture model, it appears to be as expected, increasing sharply over the first few iterations before flattening out after the fourth or fifth iteration, converging on a value of around 0.369. The different coloured dots on Figure c indicate the different cluster assignments. Looking at this, the clusters formed by algorithm 6 appear to be valid.</p>
+<h2 id="evaluating-the-results-of-cluster-analysis">Evaluating the results of cluster analysis</h2>
+<p>Once we have partitioned our dataset into clusters it is important to get an understanding
+of how “good” the clustering is. Indeed, evaluating the results of cluster analysis is an
+incredibly important part of the process and can be equally as tricky as the clustering
+itself. So how do we decide what makes a clustering “good”? We can start by looking at the definition of cluster analysis which is the organisation of observations into different groups based on their features in such a way that observations within the same cluster have features more similar to each other than to those in different clusters. From this definition, it seems to safe to say that a “good” clustering should contain clusters which contain observations which are “close” to one another and the clusters themselves should be “far away” from one another. This summarises one of the main approaches to cluster evaluation which we call internal evaluation.</p>
+<h3 id="internal-methods">Internal Methods</h3>
+<p>In general, internal evaluation methods use only the information available in the dataset
+to give a single quality score. Some of them are the objective functions being optimised
+by a clustering model or algorithm. This is almost the case for
+distortion which is equal to half of the within-cluster-variation, the objective function
+in the k-means algorithm. Of course, similar to the clustering methods themselves, the
+results of evaluation methods depend greatly on how they define a cluster. For example,
+density-based methods such as OPTICS define clusters as being an area of high density
+surrounded by an area of lower density. Therefore evaluation methods
+which define clusters similarly will usually give preference to clusterings produced by
+such methods over, say distance-based methods. We shall now discuss some examples
+of internal evaluation.</p>
+<p><strong>Silhouette coeffcient</strong>
+<figure><img src="https://11portetho.github.io/Tom_portfolio/images/sc.png"/>
+</figure>
+</p>
+<p><strong>Davies-Bouldin index</strong>
+<figure><img src="https://11portetho.github.io/Tom_portfolio/images/dbi.png"/>
+</figure>
+</p>
+<h3 id="external-methods">External Methods</h3>
+<p>External methods compare the assigned cluster labels to the true cluster labels of the
+dataset . Of course, in the majority of real world datasets, the true
+cluster labels are not known and so these evaluation methods cannot always be used.
+However these methods can be used to compare any two clusterings of the same dataset
+and so they still have their uses. They can also be used to determine the strength of
+potential clustering methods. One issue that arises from clustering when we know the
+ground truth labels is that once we have our clusters, how do we know which true cluster
+each one corresponds to. To get around this, external methods tend to check whether
+each pair of observations which have the same true label have been clustered together
+by our clustering method.</p>
+<p><strong>Purity</strong>
+<figure><img src="https://11portetho.github.io/Tom_portfolio/images/p.png"/>
+</figure>
+</p>
+<p><strong>Rand index</strong>
+<figure><img src="https://11portetho.github.io/Tom_portfolio/images/ri1.png"/>
+</figure>
+
+<figure><img src="https://11portetho.github.io/Tom_portfolio/images/ri2.png"/>
+</figure>
+</p>
+<h2 id="cluster-analysis-of-the-mnist-dataset">Cluster analysis of the MNIST dataset</h2>
+<h3 id="mnist-dataset">MNIST dataset</h3>
+<p>The MNIST (Modified National Institute of Standards and
+Technology) dataset is a collection of 70,000 images of handwritten digits from 0-9. The dataset is one of the most widely used in the field of cluster analysis due to its simplicity, ease of use and the fact that the dataset contains the true values of all 70,000 digits that have been drawn. The images are grayscale and 28 x 28 pixels which means the database requires little storage and is computationally cheap to perform cluster analysis on. Displayed below is an example of an image from the MNIST dataset.</p>
+<figure><img src="https://11portetho.github.io/Tom_portfolio/images/mnist3.png"/>
+</figure>
+
+<h3 id="cluster-analysis-of-image-data">Cluster analysis of image data</h3>
+<p>Before using any clustering method on the MNIST dataset the images have to be con-
+verted to the right dimension. Each image is stored as a 28 × 28 matrix, the values
+of this matrix being grayscale intensities. This matrix needs to be transformed into a
+1-dimensional 1 × 784 matrix so that each image represents one observation and each pixel represents one feature. Each observation will then have 784 features (p = 784).
+The 28 × 28 matrix is transformed into the 1 × 784 matrix by concatenating its rows
+together. Sometimes the scale of two feature columns can vary massively and so it is
+always good practise to standardise them so that they have mean 0 and standard deviation 1. However in the case of grayscale image data every feature column has the same
+range, the integer interval {0, &hellip;,255} and so there is no need to normalise the MNIST
+dataset.</p>
+<h3 id="evaluation-of-our-clusterings">Evaluation of our clusterings</h3>
+<p><figure><img src="https://11portetho.github.io/Tom_portfolio/images/clustering.png"/>
+</figure>
+
+<figure><img src="https://11portetho.github.io/Tom_portfolio/images/table.png"/>
+</figure>
+</p>
+<p>Looking at Figure 8.2a and imagining for the time-being that the dots are all black, it
+appears that the dataset will be tricky to cluster as (projected onto the first two principal components) the dataset appears to form one large cluster which does not look
+easily separable. This is confirmed by our results. Figure 8.2a shows clusters which
+are very close to each other. According to Table 8.1 the k-means clustering achieved
+a purity of 0.603, the best of the three methods. This is good considering a random
+cluster assignment of this dataset would be expected to achieve a purity of around 0.1.
+However, its Davies-Bouldin index is 2.523 meaning the ratio of intra-cluster to inter-
+cluster distance is higher than we would like. Similarly its silhouette coefficient of 0.094
+is close to zero which indicates that a lot of observations are between two clusters. This
+is understandable given that there are ten clusters. The Gaussian mixture model (and
+EM algorithm) performs next best in terms of purity (0.573). Again it scores poorly with
+the internal methods with the same silhouette coefficient of 0.094 and a slightly better
+Davies-Bouldin index of 2.431. This is most likely due to the fact that the clusters are
+quite close to each other in terms of Euclidean distance. This means that the average
+inter-cluster distance is not so different to the average intra-cluster distance. This would
+certainly seem to be the indication given by Figure 8.2b although note that this only
+gives a visualisation in terms of the first two principal components and so does not paint
+the whole picture given by the dataset. In terms of the external evaluation methods,
+OPTICS performs the worst. However this is due to the fact that it labelled 595 of the
+observations as outliers. This was the best clustering we could produce having run the
+algorithm for many different values of MinPts and ξ. In terms of the internal methods,
+the OPTICS clustering was very good. The silhouette coefficient of 0.453≈0.5 suggests
+a reasonable clustering. The internal methods were carried out on the results excluding the outliers and so the results may be a bit skewed. The reachability plot shown
+in Figure 8.2c shows ten rather thin-looking dents in reachability with varying depths
+corresponding to the varying density of each cluster. The outliers-noise points have been
+excluded in order to make it easier to visualise the clusters.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this report we have taken an in-depth look at three of the most commonly used
+methods in the field of cluster analysis. Each one differs from the next based on their
+definition of exactly what a cluster is with k-means’ being a group of observations with
+low intra-cluster distance and high inter-cluster distance. Obviously, the results depend
+massively on the choice of distance function. On the other hand, the OPTICS algorithm defines a cluster as an area of high density surrounded by an area of low density.
+This density is measured by considering the number of observations within a particular
+ε-neighbourhood. Lastly, the Gaussian mixture model defines clusters as groups of observations which are most likely to come from the same multivariate Gaussian distribution.
+The clusters can then be represented by the parameters of said distribution. Whilst the
+steps taken in each method differ, the results produced can be very similar and there is
+even a special case of the Gaussian mixture model where the EM algorithm takes exactly
+the same steps as the k-means algorithm. There is no clustering method which we can
+definitively say is the best. There are many factors that need to be considered when
+deciding which method to use. These include the type of data being clustered, the size
+of the dataset, the type of distance function to use and how many clusters you want to
+separate the dataset into. Each clustering method has its advantages and disadvantages
+and these need to be carefully considered before choosing one. For example, if you are
+unfamiliar with the dataset then OPTICS may be the best method to use since it does
+not require you to pre-specify the number of clusters.</p>
+<p>To access the code used in this project along with an in-depth report analysing our findings please click <a href="https://github.com/11portetho/Project">here</a>.</p>
 <ul class="pa0">
   
    <li class="list di">
-     <a href="https://11portetho.github.io/Tom_portfolio/tags/scene/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">scene</a>
+     <a href="https://11portetho.github.io/Tom_portfolio/tags/clustering/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">clustering</a>
+   </li>
+  
+   <li class="list di">
+     <a href="https://11portetho.github.io/Tom_portfolio/tags/k-means/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">k-means</a>
+   </li>
+  
+   <li class="list di">
+     <a href="https://11portetho.github.io/Tom_portfolio/tags/optics/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">OPTICS</a>
+   </li>
+  
+   <li class="list di">
+     <a href="https://11portetho.github.io/Tom_portfolio/tags/gmm/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">GMM</a>
+   </li>
+  
+   <li class="list di">
+     <a href="https://11portetho.github.io/Tom_portfolio/tags/mnist/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">MNIST</a>
+   </li>
+  
+   <li class="list di">
+     <a href="https://11portetho.github.io/Tom_portfolio/tags/scikit-learn/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Scikit-Learn</a>
    </li>
   
 </ul>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>clustering on Thomas Porter</title>
+    <link>https://11portetho.github.io/Tom_portfolio/tags/clustering/</link>
+    <description>Recent content in clustering on Thomas Porter</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 May 2021 10:58:08 -0400</lastBuildDate><atom:link href="https://11portetho.github.io/Tom_portfolio/tags/clustering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cluster analysis of handwritten digits</title>
+      <link>https://11portetho.github.io/Tom_portfolio/post/project-1/</link>
+      <pubDate>Wed, 05 May 2021 10:58:08 -0400</pubDate>
+      
+      <guid>https://11portetho.github.io/Tom_portfolio/post/project-1/</guid>
+      <description>Introduction This project provides an introduction to cluster analysis along with an example of its application on the MNIST dataset: a collection of 70,000 images of handwritten digits from 0-9. We discuss three methods of clustering: K-means, OPTICS and the Gaussian mixture model (and Expectation Maximisation algorithm) before describing principal component analysis, a common method used for data compression. These methods are subsequently applied to the MNIST dataset with their efficacy being evaluated using a number of both internal and external methods.</description>
+    </item>
+    
+  </channel>
+</rss>
