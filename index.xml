@@ -13,7 +13,7 @@
       <pubDate>Wed, 05 May 2021 10:58:08 -0400</pubDate>
       
       <guid>https://11portetho.github.io/Tom_portfolio/post/project-1/</guid>
-      <description>Introduction This project provides an introduction to cluster analysis along with an example of its application on the MNIST dataset: a collection of 70,000 images of handwritten digits from 0-9. We discuss three methods of clustering: K-means, OPTICS and the Gaussian mixture model (and Expectation Maximisation algorithm) before describing principal component analysis, a common method used for data compression. These methods are subsequently applied to the MNIST dataset with their efficacy being evaluated using a number of both internal and external methods.</description>
+      <description>This project provides an introduction to cluster analysis along with an example of its application on the MNIST dataset: a collection of 70,000 images of handwritten digits from 0-9. We discuss three methods of clustering: K-means, OPTICS and the Gaussian mixture model (and Expectation Maximisation algorithm) before describing principal component analysis, a common method used for data compression. These methods are subsequently applied to the MNIST dataset with their efficacy being evaluated using a number of both internal and external methods.</description>
     </item>
     
     <item>
